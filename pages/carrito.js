@@ -22,7 +22,7 @@ useEffect(() => {
           <h2>Artículos</h2>
            {carrito.length === 0 ?  'Cesta vacía': (
             carrito.map(producto =>(
-              <div className={styles.producto} key={producto.id}>
+              <div className={styles.producto} key={producto._id}>
                   <div>
                     <Image layout="responsive" width={250} height={500} src={producto.imagen} alt={producto.nombre} />
                   </div>
@@ -33,7 +33,7 @@ useEffect(() => {
                       <select  className={styles.select} value={producto.cantidad} name="cantidad" id="cantidad"
                       onChange={(e) => actualizarCantidad({
                         cantidad: e.target.value,
-                        id: producto.id
+                        id: producto._id
                       })}
                       >
                         <option value="1">1</option>
@@ -51,7 +51,7 @@ useEffect(() => {
                     <p className={styles.precio}><span>{producto.precio}</span>€</p>
                     <p className={styles.subtotal}>Subtotal: <span>{producto.precio * producto.cantidad}</span>€</p>
                   </div>
-                  <button type="button" className={styles.eliminar} onClick={() => eliminarProducto(producto.id)} >
+                  <button type="button" className={styles.eliminar} onClick={() => eliminarProducto(producto._id)} >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
