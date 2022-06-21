@@ -1,0 +1,93 @@
+.contenido{
+  display: grid;
+  gap:4rem;
+}
+
+@media(min-width:768px){
+  .contenido{
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+}
+
+.producto{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap:4rem;
+  align-items: center;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.producto:last-of-type{
+  border-bottom: none;
+}
+
+.producto p{
+  margin: 0 0 1rem 0;
+}
+
+.nombre{
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.cantidad{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  margin-bottom: 1rem;
+}
+
+.cantidad p{
+  margin:0;
+}
+
+.select{
+  all: unset;
+  padding:1rem;
+  border:1px solid #cfcfcf;
+  flex:1;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.precio{
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.precio span
+,.subtotal span{
+  font-size:2.4rem;
+}
+
+.subtotal{
+  font-weight: 700;
+}
+
+.eliminar{
+  all:unset;
+  position: absolute;
+  top:3rem;
+  right:1rem;
+  font-weight: bold;
+  color:#f44336;
+}
+
+.eliminar:hover{
+  cursor: pointer;
+  color:#d32f2f
+}
+
+.eliminar svg{
+  width:3rem;
+  height: 3rem;
+}
+
+.resumen{
+  background-color: #ecedef;
+  padding: 3rem;
+
+}
